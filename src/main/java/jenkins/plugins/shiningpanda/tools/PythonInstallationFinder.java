@@ -21,6 +21,12 @@
  */
 package jenkins.plugins.shiningpanda.tools;
 
+import hudson.FilePath;
+import hudson.Platform;
+import hudson.tools.ToolProperty;
+import jenkins.model.Jenkins;
+import jenkins.plugins.shiningpanda.interpreters.Python;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -28,12 +34,6 @@ import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-
-import hudson.FilePath;
-import hudson.Platform;
-import hudson.tools.ToolProperty;
-import jenkins.model.Jenkins;
-import jenkins.plugins.shiningpanda.interpreters.Python;
 
 public class PythonInstallationFinder {
 
@@ -149,7 +149,7 @@ public class PythonInstallationFinder {
 	candidates.put("System-CPython-3.1", "/usr/bin/python3.1");
 	candidates.put("System-CPython-3.2", "/usr/bin/python3.2");
 	candidates.put("System-CPython-3.3", "/usr/bin/python3.3");
-	candidates.put("System-CPython-3.3", "/usr/bin/python3.4");
+	candidates.put("System-CPython-3.4", "/usr/bin/python3.4");
 	// JYTHON
 	candidates.put("System-Jython", "/usr/bin/jython");
 	// Return candidates
@@ -172,8 +172,8 @@ public class PythonInstallationFinder {
 	candidates.put("CPython-3.0", "C:\\Python30");
 	candidates.put("CPython-3.1", "C:\\Python31");
 	candidates.put("CPython-3.2", "C:\\Python32");
-	candidates.put("CPython-3.2", "C:\\Python33");
-	candidates.put("CPython-3.2", "C:\\Python34");
+	candidates.put("CPython-3.3", "C:\\Python33");
+	candidates.put("CPython-3.4", "C:\\Python34");
 	// Return candidates
 	return candidates;
     }

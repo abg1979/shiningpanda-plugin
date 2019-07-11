@@ -21,12 +21,6 @@
  */
 package jenkins.plugins.shiningpanda.tools;
 
-import java.io.IOException;
-import java.util.List;
-
-import org.kohsuke.stapler.DataBoundConstructor;
-import org.kohsuke.stapler.QueryParameter;
-
 import hudson.CopyOnWrite;
 import hudson.EnvVars;
 import hudson.Extension;
@@ -47,6 +41,11 @@ import jenkins.plugins.shiningpanda.Messages;
 import jenkins.plugins.shiningpanda.utils.DescriptorUtil;
 import jenkins.plugins.shiningpanda.utils.FormValidationUtil;
 import jenkins.plugins.shiningpanda.utils.StringUtil;
+import org.kohsuke.stapler.DataBoundConstructor;
+import org.kohsuke.stapler.QueryParameter;
+
+import java.io.IOException;
+import java.util.List;
 
 public class PythonInstallation extends ToolInstallation
 	implements EnvironmentSpecific<PythonInstallation>, NodeSpecific<PythonInstallation> {
